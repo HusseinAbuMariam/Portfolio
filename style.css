@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif ;
+}
+body{
+    height: 100vh;
+    background: url(imeges/jeremy-bishop-G9i_plbfDgk-unsplash.jpg) no-repeat center/ cover;
+    padding: 50px 5%;
+}
+.container{
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255,.1);
+    border: 2px solid rgba(255, 255, 255,.2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+}
+@keyframes zoom-in{
+    100%{
+        transform: scale(1);
+    }
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.animated{
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1 ease forwards;
+    animation-delay: 1s;
+}
+@keyframes slide-in{
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.Logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+.navbar a:hover {
+    border-color: #fff;
+}
+.navbar a.active{
+    border-color: #fff;
+}
+.Home{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding:50px 5% 0;
+    color: #fff;
+    animation-delay: 1.5s;
+}
+.HomeDetail h1{
+    font-size:55px;
+    line-height:1 ;
+
+}
+.HomeDetail h2{
+    font-size:32px;
+}
+.HomeDetail p{
+    margin:10px 0 20px ;
+}
+.HomeDetail .DownloudSocial{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background:#fff ;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s;
+}
+.btn:hover{
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+}
+.HomeDetail .SocialIcon{
+    margin-left: 20px;
+}
+.HomeDetail .SocialIcon a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: .5s;
+}
+.HomeDetail .SocialIcon a :hover{
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
+    color: #333;
+}
+.HomeImg .ImgBox{
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff;
+    overflow: hidden;
+}
+.HomeImg .ImgBox img{
+    position: absolute;
+    top: 30px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
